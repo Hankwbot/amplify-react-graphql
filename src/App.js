@@ -57,7 +57,6 @@ const App = ({ signOut }) => {
     fetchNotes();
     event.target.reset();
   }
-
   async function deleteNote({ id, name }) {
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);
@@ -91,10 +90,10 @@ const App = ({ signOut }) => {
             required
           />
           <View
-          name="image"
-          as="input"
-          type="file"
-          style={{ alignSelf: "end" }}
+            name="image"
+            as="input"
+            type="file"
+            style={{ alignSelf: "end" }}
           />
           <Button type="submit" variation="primary">
             Create Note
